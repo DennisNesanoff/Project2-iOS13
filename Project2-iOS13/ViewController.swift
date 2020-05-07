@@ -29,13 +29,14 @@ class ViewController: UIViewController {
             if correctAnswer == sender.tag {
                 title = "Correct"
                 score += 1
-                showAlert(title: title ?? "")
+                showAlert(title: title ?? "", message: "Your score is \(score).", newGame: false)
             } else {
                 title = "Wrong! It's \(countries[sender.tag].uppercased())"
                 score -= 1
-                showAlert(title: title ?? "")
+                showAlert(title: title ?? "", message: "Your score is \(score).", newGame: false)
             }
         } else {
+            showAlert(title: "Start New Game", message: "Your score is \(score).", newGame: true)
             startNewGame()
         }
     }
@@ -67,10 +68,14 @@ class ViewController: UIViewController {
         button3.setImage(UIImage(named: countries[2]), for: .normal)
     }
     
-    func showAlert(title: String) {
-        let alertController = UIAlertController(title: title, message: "Your score is \(score).", preferredStyle: .alert)
+    func showAlert(title: String, message: String, newGame: Bool) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "Continue", style: .default) { _ in
-            self.setupUI()
+            if newGame {
+                self.startNewGame()
+            } else {
+                self.setupUI()
+            }
         }
         alertController.addAction(action)
         present(alertController, animated: true)
