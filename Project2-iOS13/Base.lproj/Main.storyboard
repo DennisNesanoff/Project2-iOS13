@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1FT-hs-hue">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,108 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Project2_iOS13" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="QtC-IN-5p9">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZN0-LD-oYO">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="231.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MEs-f6-cQT">
+                                                <rect key="frame" x="107" y="65.5" width="200" height="100"/>
+                                                <state key="normal" image="us"/>
+                                                <connections>
+                                                    <action selector="selectCountry:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PR1-N2-J0c"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="MEs-f6-cQT" firstAttribute="centerY" secondItem="ZN0-LD-oYO" secondAttribute="centerY" id="aiY-mt-BEc"/>
+                                            <constraint firstItem="MEs-f6-cQT" firstAttribute="centerX" secondItem="ZN0-LD-oYO" secondAttribute="centerX" id="kM9-eN-9kq"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="68C-9h-Ol4">
+                                        <rect key="frame" x="0.0" y="271.5" width="414" height="231"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JSD-rK-7w1">
+                                                <rect key="frame" x="107" y="65.5" width="200" height="100"/>
+                                                <state key="normal" image="us"/>
+                                                <connections>
+                                                    <action selector="selectCountry:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wlQ-ae-O6q"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="JSD-rK-7w1" firstAttribute="centerX" secondItem="68C-9h-Ol4" secondAttribute="centerX" id="YGh-Ub-Bfk"/>
+                                            <constraint firstItem="JSD-rK-7w1" firstAttribute="centerY" secondItem="68C-9h-Ol4" secondAttribute="centerY" id="zyr-wT-bqg"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="46y-Ul-5GV">
+                                        <rect key="frame" x="0.0" y="542.5" width="414" height="231.5"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zgw-sw-OcY">
+                                                <rect key="frame" x="107" y="66" width="200" height="100"/>
+                                                <state key="normal" image="us"/>
+                                                <connections>
+                                                    <action selector="selectCountry:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nan-CR-0KC"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="Zgw-sw-OcY" firstAttribute="centerX" secondItem="46y-Ul-5GV" secondAttribute="centerX" id="E5g-ul-2aN"/>
+                                            <constraint firstItem="Zgw-sw-OcY" firstAttribute="centerY" secondItem="46y-Ul-5GV" secondAttribute="centerY" id="ycK-uH-qRh"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="QtC-IN-5p9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6bQ-lV-5sn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QtC-IN-5p9" secondAttribute="bottom" id="CWp-Xh-gk6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QtC-IN-5p9" secondAttribute="trailing" id="Cbd-sa-lkh"/>
+                            <constraint firstItem="QtC-IN-5p9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="XG1-bF-ydQ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Kfp-d6-9z4"/>
+                    <connections>
+                        <outlet property="button1" destination="MEs-f6-cQT" id="p6w-4V-asR"/>
+                        <outlet property="button2" destination="JSD-rK-7w1" id="ndY-8q-igM"/>
+                        <outlet property="button3" destination="Zgw-sw-OcY" id="o9O-T3-4t6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="937.68115942028987" y="137.94642857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hT6-U3-6F2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1FT-hs-hue" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3W4-hx-T1L">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="fmG-hM-ggA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rGV-Jl-wjg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="us" width="200" height="100"/>
+    </resources>
 </document>
